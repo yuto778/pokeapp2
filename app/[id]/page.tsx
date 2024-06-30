@@ -36,7 +36,7 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
         <img src={pokemon.sprites.front_default} className="size-96" alt="" />
       </div>
       {pokemon.id !== 1 && (
-        <div className="absolute bottom-4 left-4">
+        <div className="absolute bottom-2 left-4">
           <Button variant={"outline"} className="relative font-bold text-2xl">
             ⇦
             <Link
@@ -48,7 +48,7 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
       )}
 
       {pokemon.id !== 151 && (
-        <div className="absolute bottom-4 right-4">
+        <div className="absolute bottom-2 right-4">
           <Button variant={"outline"} className="relative font-bold text-2xl">
             ⇨
             <Link
