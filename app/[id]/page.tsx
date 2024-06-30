@@ -2,8 +2,14 @@ import { Button } from "@/components/ui/button";
 import { getpokemon } from "@/data/pokemon";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Metadata } from "next";
 
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "詳細ページ",
+  description: "詳細ページです",
+};
 
 const page = async ({ params: { id } }: { params: { id: string } }) => {
   const pokemon = await getpokemon(id);
