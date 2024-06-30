@@ -17,10 +17,10 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
   return (
     <div className=" md:h-screen flex flex-col md:flex-row justify-center md:relative">
       <div className=" p-10 flex flex-col w-full md:w-1/3 items-center">
-        <div className="size-10 self-start relative">
-          <FontAwesomeIcon icon={faHome} className="self-start" size="sm" />
+        <Button variant={"outline"} className="relative self-start">
+          戻る
           <Link href={"/"} className="absolute inset-0"></Link>
-        </div>
+        </Button>
 
         <div className="text-3xl self-start mt-6 ">詳細ページ</div>
         <h2 className="font-bold text-3xl mt-6 mb-8 md:mt-28 md:mb-12">
