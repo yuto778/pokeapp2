@@ -15,20 +15,22 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
   const pokemon = await getpokemon(id);
 
   return (
-    <div className=" bg-green-300 md:h-screen flex flex-col md:flex-row justify-center md:relative">
-      <div className=" p-10 flex flex-row md:flex-col w-1/3 items-center space-y-10">
+    <div className=" md:h-screen flex flex-col md:flex-row justify-center md:relative">
+      <div className=" p-10 flex flex-col w-full md:w-1/3 items-center">
         <div className="size-10 self-start relative">
           <FontAwesomeIcon icon={faHome} className="self-start" size="sm" />
           <Link href={"/"} className="absolute inset-0"></Link>
         </div>
 
-        <h2 className="text-3xl self-start">詳細ページ</h2>
-        <h2 className="font-bold text-3xl mt-6">{pokemon.id}</h2>
-        <h2 className="font-bold text-2xl">{pokemon.name}</h2>
+        <div className="text-3xl self-start mt-6 ">詳細ページ</div>
+        <h2 className="font-bold text-3xl mt-6 mb-8 md:mt-28 md:mb-12">
+          ID: {pokemon.id}
+        </h2>
+        <h2 className="font-bold text-2xl">NAME: {pokemon.name}</h2>
       </div>
 
       <div
-        className="w-2/3 flex items-center justify-center
+        className="w-full md:w-2/3 flex items-center justify-center
       "
       >
         <img src={pokemon.sprites.front_default} className="size-96" alt="" />
