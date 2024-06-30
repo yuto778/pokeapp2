@@ -15,7 +15,7 @@ export default async function Home() {
             return (
               <div
                 key={pokemon.id}
-                className="flex flex-col p-6 items-center gap-3 bg-green-700 rounded-lg relative"
+                className="flex flex-col p-6 items-center gap-3 bg-green-700 rounded-lg shadow-lg relative"
               >
                 <h2 className="text-2xl font-bold">
                   {pokemon.name}
