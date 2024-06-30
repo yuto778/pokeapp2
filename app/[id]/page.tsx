@@ -33,7 +33,11 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
         className="w-full md:w-2/3 flex items-center justify-center
       "
       >
-        <img src={pokemon.sprites.front_default} className="size-96" alt="" />
+        <img
+          src={pokemon.sprites.front_default}
+          className="md:size-96 size-80"
+          alt=""
+        />
       </div>
       {pokemon.id !== 1 && (
         <div className="absolute bottom-2 left-4">
